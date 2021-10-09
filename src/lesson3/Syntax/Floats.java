@@ -6,6 +6,12 @@ public class Floats {
 
     public static void main(String[] args) {
 
+        // FLOAT
+        Float simpleFloat = 3.145555855f;
+
+        // DOUBLE
+        Double simpleDouble = 3.145555454515;
+
         float radius = 5.5f;
         double diameter = 28.123d;
 
