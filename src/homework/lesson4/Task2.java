@@ -1,21 +1,31 @@
 package homework.lesson4;
 
 public class Task2 {
-    public int romanToInt(String S) {
-        int ans = 0, num = 0;
-        for (int i = S.length()-1; i >= 0; i--) {
-            switch(S.charAt(i)) {
-                case 'I': num = 1; break;
-                case 'V': num = 5; break;
-                case 'X': num = 10; break;
-                case 'L': num = 50; break;
-                case 'C': num = 100; break;
-                case 'D': num = 500; break;
-                case 'M': num = 1000; break;
+    public static void main(String[] args) {
+        Roman(39);
+        Roman(1990);
+        Roman(750);
+        Roman(29);
+        Roman(333);
+        Roman(114);
+        Roman(3999);
+        Roman(52);
+    }
+
+    public static void Roman(int num) {
+
+        System.out.println("Integer: " + num);
+        int[] digits = {1000,900,500,400,100,90,50,40,10,9,5,4,1};
+        String[] romanSymbols = {"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
+
+        StringBuilder roman = new StringBuilder();
+
+        for(int i=0;i<digits.length;i++) {
+            while(num >= digits[i]) {
+                num -= digits[i];
+                roman.append(romanSymbols[i]);
             }
-            if (4 * num < ans) ans -= num;
-            else ans += num;
         }
-        return ans;
+        System.out.println("Number in roman is: " + roman.toString());
     }
 }
