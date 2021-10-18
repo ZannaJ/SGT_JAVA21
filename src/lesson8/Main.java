@@ -24,6 +24,7 @@ public class Main {
     Rectangle rectangle = new Rectangle(2,3);
     Square square = new Square(4,4);
 
+
     rectangle.printArea();
     rectangle.printPerimeter();
     square.printArea();
