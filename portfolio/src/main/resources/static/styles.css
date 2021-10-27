@@ -1,0 +1,32 @@
+body {
+    padding-left: 11em;
+    color: black;
+    background-color: #D8CEF6
+
+}
+
+.column1 {
+    float: left;
+    width: 25%;
+}
+
+.column2 {
+    float: left;
+    width: 50%;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+
+}
+.myName{
+    color: black;
+    font-weight: bold;
+}
+.description{
+    color: black;
+
+}
+
